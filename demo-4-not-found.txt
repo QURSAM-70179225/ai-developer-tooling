@@ -1,0 +1,9 @@
+$ analyze https://github.com/fastapi/nope-not-real
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ ✖ Repository not found ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃                                                                                                                                                              ┃
+┃  Could not find github.com/fastapi/nope-not-real (HTTP 404).                                                                                                 ┃
+┃                                                                                                                                                              ┃
+┃  💡 Check the spelling of the owner and repository name. GitHub also returns 404 for private repositories you can't see. If it's private, pass --token with  ┃
+┃  a token that has access.                                                                                                                                    ┃
+┃                                                                                                                                                              ┃
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛

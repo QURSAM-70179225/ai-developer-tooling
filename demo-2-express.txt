@@ -1,0 +1,244 @@
+$ analyze https://github.com/expressjs/express
+
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ Repo Analyzer ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃                                                                                                                                                              ┃
+┃  📦 expressjs/express                                                                                                                                        ┃
+┃  Fast, unopinionated, minimalist web framework for node.                                                                                                     ┃
+┃                                                                                                                                                              ┃
+┃  ⭐ 69,580 stars    🍴 25,367 forks   🐛 261 open issues      👀 1,699 watchers                                                                              ┃
+┃  🌿 branch master   📜 license MIT    🗓  created 2009-06-26   🚀 pushed 2 days ago                                                                           ┃
+┃  #express  #javascript  #nodejs  #server                                                                                                                     ┃
+┃  https://github.com/expressjs/express                                                                                                                        ┃
+┃                                                                                                                                                              ┃
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ GitHub public REST API ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+╭─────────────────────────────────────────────────────────────── 🧰 Tech Stack (with evidence) ────────────────────────────────────────────────────────────────╮
+│  Technology                      Category                        Evidence                                                                                    │
+│ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ │
+│  JavaScript                      Language                        • GitHub Linguist: 100.0% of code (503.3 KB)                                                │
+│                                                                  • 142 source file(s) in tree                                                                │
+│                                                                                                                                                              │
+│  Node.js / npm                   Runtime & Build                 • package.json                                                                              │
+│                                                                                                                                                              │
+│  Mocha                           Testing                         • package.json → mocha@^11.7.5 (dev)                                                        │
+│   dev/test only                                                                                                                                              │
+│                                                                                                                                                              │
+│  GitHub Actions                  DevOps & CI                     • .github/workflows/ci.yml                                                                  │
+│                                                                  • .github/workflows/codeql.yml                                                              │
+│                                                                  • .github/workflows/legacy.yml                                                              │
+│                                                                  • …and 2 more                                                                               │
+│                                                                                                                                                              │
+│  ESLint                          Tooling                         • .eslintrc.yml                                                                             │
+│ Evidence = the file or manifest entry that proves each item. "dev/test only" = found only in development/test dependencies, so it is a tool used to build or │
+│ test the project, not part of what it ships.                                                                                                                 │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭──────────────────────────────────────────────────────────────────── 🧮 Complexity Score ─────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                              │
+│                                                                     51 / 100    COMPLEX                                                                      │
+│ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸                                                                             │
+│  Component                      │ Measured                       │        Points │ Rule (what earns full points)                                             │
+│ ────────────────────────────────┼────────────────────────────────┼───────────────┼────────────────────────────────────────────────────────────────────────── │
+│  Codebase size                  │ 154 code files                 │       20.7/35 │ log scale, 5,000 code files = max                                         │
+│  Nesting depth                  │ avg 2.7 / max 5                │        6.6/20 │ average path depth of code files, 6 = max                                 │
+│  Language diversity             │ 1 language(s) ≥2%              │        0.0/15 │ 5+ significant languages = max                                            │
+│  Code density                   │ 93% code vs config             │       14.0/15 │ share of code files among code + config files                             │
+│  Dependency surface             │ 44 declared deps               │       10.0/15 │ log scale, 300 dependencies = max                                         │
+│ Main reasons: codebase size (154 code files); code density (93% code vs config)                                                                              │
+│                                                                                                                                                              │
+│ Method: score = sum of 5 capped components (35 + 20 + 15 + 15 + 15 = 100). Size and dependencies use log scales so huge repos don't max out instantly. Code  │
+│ = source files by extension; config = manifests, YAML/JSON/TOML, Dockerfiles; docs/assets don't count as code.                                               │
+│ 0–25 Simple · 26–50 Moderate · 51–75 Complex · 76–100 Very Complex                                                                                           │
+│                                                                                                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭──────────────────────────────────────────────────────────────────── 🩺 Dependency Health ────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                              │
+│                                                                    ⚠️   WARNING    70/100                                                                    │
+│ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━                                                │
+│ ✖  npm: no lockfile (expected one of package-lock.json, yarn.lock, pnpm-lock.yaml) -25                                                                       │
+│ ✔  Automated dependency updates configured (.github/dependabot.yml)                                                                                          │
+│ ▲  No SECURITY.md policy                                                            -5                                                                       │
+│ ✔  CI pipeline configured                                                                                                                                    │
+│ ✔  All 44 unique deps declare a version constraint                                                                                                           │
+│ ✔  Actively maintained (last push 2 day(s) ago)                                                                                                              │
+│                                                                                                                                                              │
+│ Declared deps: 44   exact 8  range 36  unpinned 0  url/git 0                                                                                                 │
+│ Ecosystems: npm                                                                                                                                              │
+│                                                                                                                                                              │
+│ What "healthy" means here: installs are reproducible (a lockfile, or every version pinned), updates are automated (Dependabot/Renovate) and tested (CI),     │
+│ versions are constrained, a security policy exists, and the project is still maintained. Score starts at 100; each failed check subtracts the penalty shown. │
+│ Not checked: whether packages are outdated or have known vulnerabilities. That needs a lookup per package on PyPI/npm/OSV, which this tool does not do, so   │
+│ it makes no claim either way.                                                                                                                                │
+│ ≥75 Healthy · 50–74 Warning · <50 At Risk                                                                                                                    │
+│                                                                                                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭────────────────────────────────────────────────────────────────────── 📦 Dependencies ───────────────────────────────────────────────────────────────────────╮
+│  Package                                       Declared version                        Pinning              Scope               Manifest                     │
+│ ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────── │
+│  accepts                                       ^2.0.0                                  range                runtime             package.json                 │
+│  body-parser                                   ^2.4.0                                  range                runtime             package.json                 │
+│  content-disposition                           ^2.0.1                                  range                runtime             package.json                 │
+│  content-type                                  ^2.0.0                                  range                runtime             package.json                 │
+│  cookie                                        ^0.7.1                                  range                runtime             package.json                 │
+│  cookie-signature                              ^1.2.1                                  range                runtime             package.json                 │
+│  debug                                         ^4.4.0                                  range                runtime             package.json                 │
+│  depd                                          ^2.0.0                                  range                runtime             package.json                 │
+│  encodeurl                                     ^2.0.0                                  range                runtime             package.json                 │
+│  escape-html                                   ^1.0.3                                  range                runtime             package.json                 │
+│  etag                                          ^1.8.1                                  range                runtime             package.json                 │
+│  finalhandler                                  ^2.1.0                                  range                runtime             package.json                 │
+│  fresh                                         ^2.0.0                                  range                runtime             package.json                 │
+│  http-errors                                   ^2.0.0                                  range                runtime             package.json                 │
+│  merge-descriptors                             ^2.0.0                                  range                runtime             package.json                 │
+│  mime-types                                    ^3.0.0                                  range                runtime             package.json                 │
+│  on-finished                                   ^2.4.1                                  range                runtime             package.json                 │
+│  once                                          ^1.4.0                                  range                runtime             package.json                 │
+│  parseurl                                      ^1.3.3                                  range                runtime             package.json                 │
+│  proxy-addr                                    ^2.0.8                                  range                runtime             package.json                 │
+│  qs                                            ^6.16.0                                 range                runtime             package.json                 │
+│  range-parser                                  ^1.2.1                                  range                runtime             package.json                 │
+│  router                                        ^2.2.0                                  range                runtime             package.json                 │
+│  send                                          ^1.1.0                                  range                runtime             package.json                 │
+│  serve-static                                  ^2.2.0                                  range                runtime             package.json                 │
+│ Showing 25 of 44 unique dependencies (28 runtime, 16 dev)  ·  full list: analyze <url> --json                                                                │
+│ Pinning: exact = one version (==1.2.3) · range = allowed span (>=1.2, ^1.2) · UNPINNED = any version, risky · git/url = installed outside the package        │
+│ registry.                                                                                                                                                    │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭───────────────────────────────────────────────────────────── 📄 Manifest Preview — package.json ─────────────────────────────────────────────────────────────╮
+│    1 {                                                                                                                                                       │
+│    2   "name": "express",                                                                                                                                    │
+│    3   "description": "Fast, unopinionated, minimalist web framework",                                                                                       │
+│    4   "version": "5.3.0",                                                                                                                                   │
+│    5   "author": "TJ Holowaychuk <tj@vision-media.ca>",                                                                                                      │
+│    6   "contributors": [                                                                                                                                     │
+│    7     "Aaron Heckmann <aaron.heckmann+github@gmail.com>",                                                                                                 │
+│    8     "Ciaran Jessup <ciaranj@gmail.com>",                                                                                                                │
+│    9     "Douglas Christopher Wilson <doug@somethingdoug.com>",                                                                                              │
+│   10     "Guillermo Rauch <rauchg@gmail.com>",                                                                                                               │
+│   11     "Jonathan Ong <me@jongleberry.com>",                                                                                                                │
+│   12     "Roman Shtylman <shtylman+expressjs@gmail.com>",                                                                                                    │
+│   13     "Young Jae Sim <hanul@hanul.me>"                                                                                                                    │
+│   14   ],                                                                                                                                                    │
+│   15   "license": "MIT",                                                                                                                                     │
+│   16   "repository": "expressjs/express",                                                                                                                    │
+│   17   "homepage": "https://expressjs.com/",                                                                                                                 │
+│   18   "funding": {                                                                                                                                          │
+│   19     "type": "opencollective",                                                                                                                           │
+│   20     "url": "https://opencollective.com/express"                                                                                                         │
+│   21   },                                                                                                                                                    │
+│   22   "keywords": [                                                                                                                                         │
+│   23     "express",                                                                                                                                          │
+│   24     "framework",                                                                                                                                        │
+│   25     "sinatra",                                                                                                                                          │
+│   26     "web",                                                                                                                                              │
+│   27     "http",                                                                                                                                             │
+│   28     "rest",                                                                                                                                             │
+│   29     "restful",                                                                                                                                          │
+│   30     "router",                                                                                                                                           │
+╰──────────────────────────────────────────────────────────────────── first 30 of 99 lines ────────────────────────────────────────────────────────────────────╯
+╭───────────────────────────────────────────────────────────────────── 🌳 File Structure ──────────────────────────────────────────────────────────────────────╮
+│ Major areas                                                                                                                                                  │
+│  Folder           Files   Main file types                          Purpose                                                                                   │
+│ ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────── │
+│  test/              114   .js 92 · .txt 7 · .tmpl 7                Automated tests  (by name)                                                                │
+│  examples/           80   .js 43 · .ejs 20 · .txt 4                Example / tutorial code  (by name)                                                        │
+│  .github/             6   .yml 6                                   GitHub config: CI workflows, issue/PR templates, Dependabot  (by name)                    │
+│  lib/                 6   .js 6                                    Main source code  (by name)                                                               │
+│  (root files)        10   (no ext) 2 · .md 2 · .editorconfig 1     Top-level files, e.g. Readme.md, LICENSE, package.json, .editorconfig  (by contents)      │
+│                                                                                                                                                              │
+│ 📁 express/                                                                                                                                                  │
+│ ├── 📁 .github/  6 files                                                                                                                                     │
+│ │   ├── 📁 workflows/  5 files                                                                                                                               │
+│ │   │   ├── ⚙️  ci.yml                                                                                                                                       │
+│ │   │   ├── ⚙️  codeql.yml                                                                                                                                   │
+│ │   │   ├── ⚙️  legacy.yml                                                                                                                                   │
+│ │   │   ├── ⚙️  npm-publish.yml                                                                                                                              │
+│ │   │   └── ⚙️  scorecard.yml                                                                                                                                │
+│ │   └── ⚙️  dependabot.yml                                                                                                                                   │
+│ ├── 📁 examples/  80 files                                                                                                                                   │
+│ │   ├── 📁 auth/  4 files                                                                                                                                    │
+│ │   │   ├── 📁 views/  3 files                                                                                                                               │
+│ │   │   └── 📄 index.js                                                                                                                                      │
+│ │   ├── 📁 content-negotiation/  3 files                                                                                                                     │
+│ │   │   ├── 📄 db.js                                                                                                                                         │
+│ │   │   ├── 📄 index.js                                                                                                                                      │
+│ │   │   └── 📄 users.js                                                                                                                                      │
+│ │   ├── 📁 cookie-sessions/  1 file                                                                                                                          │
+│ │   │   └── 📄 index.js                                                                                                                                      │
+│ │   ├── 📁 cookies/  1 file                                                                                                                                  │
+│ │   │   └── 📄 index.js                                                                                                                                      │
+│ │   ├── 📁 downloads/  4 files                                                                                                                               │
+│ │   │   ├── 📁 files/  3 files                                                                                                                               │
+│ │   │   └── 📄 index.js                                                                                                                                      │
+│ │   └── … 21 more (20 dirs, 1 file)                                                                                                                          │
+│ ├── 📁 lib/  6 files                                                                                                                                         │
+│ │   ├── 📄 application.js                                                                                                                                    │
+│ │   ├── 📄 express.js                                                                                                                                        │
+│ │   ├── 📄 request.js                                                                                                                                        │
+│ │   ├── 📄 response.js                                                                                                                                       │
+│ │   ├── 📄 utils.js                                                                                                                                          │
+│ │   └── … 1 more (0 dirs, 1 file)                                                                                                                            │
+│ ├── 📁 test/  114 files                                                                                                                                      │
+│ │   ├── 📁 acceptance/  18 files                                                                                                                             │
+│ │   │   ├── 📄 auth.js                                                                                                                                       │
+│ │   │   ├── 📄 content-negotiation.js                                                                                                                        │
+│ │   │   ├── 📄 cookie-sessions.js                                                                                                                            │
+│ │   │   ├── 📄 cookies.js                                                                                                                                    │
+│ │   │   ├── 📄 downloads.js                                                                                                                                  │
+│ │   │   └── … 13 more (0 dirs, 13 files)                                                                                                                     │
+│ │   ├── 📁 fixtures/  22 files                                                                                                                               │
+│ │   │   ├── 📁 blog/  2 files                                                                                                                                │
+│ │   │   ├── 📁 default_layout/  2 files                                                                                                                      │
+│ │   │   ├── 📁 local_layout/  1 file                                                                                                                         │
+│ │   │   ├── 📁 pets/  1 file                                                                                                                                 │
+│ │   │   ├── 📁 snow ☃/  1 file                                                                                                                               │
+│ │   │   └── … 14 more (1 dir, 13 files)                                                                                                                      │
+│ │   ├── 📁 support/  3 files                                                                                                                                 │
+│ │   │   ├── 📄 env.js                                                                                                                                        │
+│ │   │   ├── 📄 tmpl.js                                                                                                                                       │
+│ │   │   └── 📄 utils.js                                                                                                                                      │
+│ │   ├── 📄 app.all.js                                                                                                                                        │
+│ │   ├── 📄 app.engine.js                                                                                                                                     │
+│ │   └── … 69 more (0 dirs, 69 files)                                                                                                                         │
+│ ├── ⚙️  .editorconfig                                                                                                                                        │
+│ ├── 📦 .eslintignore                                                                                                                                         │
+│ ├── ⚙️  .eslintrc.yml                                                                                                                                        │
+│ ├── ⚙️  .gitignore                                                                                                                                           │
+│ ├── ⚙️  .npmrc                                                                                                                                               │
+│ ├── 📝 History.md                                                                                                                                            │
+│ └── … 4 more (0 dirs, 4 files)                                                                                                                               │
+│                                                                                                                                                              │
+│ 216 files · 68 dirs   📄 code 154  ⚙️  config 11  📝 docs 16  📦 other 35                                                                                    │
+│ Condensed to fit 60 lines: 3 level(s), 10 top-level / 5 nested entries per folder (--max-lines 0 for the full view). Ignored: .git, node_modules, venv,      │
+│ dist, build, vendor, caches…                                                                                                                                 │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭────────────────────────────────────────────────────────────────── 📈 Contribution Activity ──────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                              │
+│ Commits per week                                                                                                                                             │
+│  8 ┤                                                               ██                                                                                        │
+│    │               ██                                              ██                                                                                        │
+│    │               ██                                              ██                                                                                        │
+│    │   ██          ██                                  ██          ██                                                                                        │
+│  4 ┤   ██          ██                                  ██          ██                                                                                        │
+│    │   ██          ██       ██                ██       ██       ██ ██          ██                                                                            │
+│    │   ██          ██       ██                ██ ██    ██ ██    ██ ██          ██                                                                            │
+│    │·· ██ ·· ·· ·· ██ ·· ·· ██ ██ ·· ██ ·· ·· ██ ██ ·· ██ ██ ·· ██ ██ ██ ██ ·· ██                                                                            │
+│    └──────────────────────────────────────────────────────────────────────────────                                                                           │
+│     May         Jun         Jul         Aug            Sep         Oct         Nov                                                                           │
+│                                                                                                                                                              │
+│ Total 45   Avg/week 1.7   Peak 8 (wk of Oct 04)   Active weeks 14/26   Trend ▲ +65%                                                                          │
+│ Weekly commits on the default branch, last 26 weeks · source: stats/commit_activity                                                                          │
+│                                                                                                                                                              │
+│ Top contributors (all-time commits)                                                                                                                          │
+│  1. tj              ██████████████████████████████████████████████████ 3,881                                                                                 │
+│  2. dougwilson      ████████████████                                   1,232                                                                                 │
+│  3. jonathanong     █                                                     84                                                                                 │
+│  4. defunctzombie   █                                                     70                                                                                 │
+│  5. dependabot[bot] █                                                     57                                                                                 │
+│  6. wesleytodd      █                                                     48                                                                                 │
+│  7. UlisesGascon    █                                                     47                                                                                 │
+│  8. ciaranj         █                                                     26                                                                                 │
+│  9. bjohansebas     █                                                     22                                                                                 │
+│ 10. slaskis         █                                                     21                                                                                 │
+│ Counts come from GitHub's contributor list (default branch, all time; anonymous commits excluded). Automated accounts end in [bot].                          │
+│                                                                                                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+                                                  API quota: 4918/5000 left · 7 requests used · authenticated                                                   

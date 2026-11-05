@@ -1,0 +1,23 @@
+{
+  "action": "opened",
+  "repository": {
+    "full_name": "YOUR-USER/pr-reviewer-test"
+  },
+  "pull_request": {
+    "number": 1,
+    "state": "open",
+    "draft": false,
+    "title": "DEMO-1 Greeting function",
+    "html_url": "https://github.com/YOUR-USER/pr-reviewer-test/pull/1",
+    "user": {
+      "login": "YOUR-USER"
+    },
+    "head": {
+      "ref": "feature/DEMO-1-greeting",
+      "sha": "REPLACE-WITH-HEAD-SHA"
+    },
+    "base": {
+      "ref": "main"
+    }
+  }
+}

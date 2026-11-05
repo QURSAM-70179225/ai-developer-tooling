@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "repo-analyzer-cli"
+version = "1.0.0"
+description = "Task 4 tools: Repo Analyzer CLI (Track B) and AI PR Reviewer webhook listener (Track A)."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+dependencies = [
+    "rich>=13.7,<15",
+    "requests>=2.31,<3",
+    "tomli>=2.0; python_version < '3.11'",
+]
+
+[project.optional-dependencies]
+web = ["streamlit>=1.36,<2", "pandas>=2.0"]
+
+[project.scripts]
+analyze = "repo_analyzer.cli:main"
+pr-review = "pr_reviewer.cli:main"
+
+[tool.setuptools]
+packages = ["repo_analyzer", "pr_reviewer"]

@@ -1,0 +1,33 @@
+$ pr-review review --repo QURSAM-70179225/pr-reviewer-test1 --pr 2 --live -o demo-A1-blocked.txt
+🤖 AI PR Reviewer · ticket source: local · LLM: openai/openai/gpt-oss-120b · mode: LIVE (comments, statuses and merges are real)
+  · set status 'pending'
+  · ticket id: DEMO-2
+  · ticket fetched: 'Add two numbers'
+  · diff fetched: 200 characters
+  · verdict: fulfilled=False
+  · set status 'failure' (blocks merging)
+  · post REQUEST_CHANGES review with the feedback
+┌──────────────────────────────────────────────────────────────────── 🤖 AI PR Review ─────────────────────────────────────────────────────────────────────┐
+│                                                                                                                                                          │
+│  ❌ BLOCKED: requirements not met                                                                                                                        │
+│                                                                                                                                                          │
+│  Pull request  QURSAM-70179225/pr-reviewer-test1#2: DEMO-2 Add two numbers                                                                               │
+│  Branch        feature/DEMO-2-add → main                                                                                                                 │
+│  Ticket        DEMO-2: Add two numbers                                                                                                                   │
+│  Diff          200 characters                                                                                                                            │
+│                                                                                                                                                          │
+│  LLM verdict: fulfilled = false                                                                                                                          │
+│                                                                                                                                                          │
+│   • The add function does not validate that both arguments are numbers; it simply returns a + b, which will allow non‑numeric types like strings to be   │
+│     concatenated instead of raising TypeError as required.                                                                                               │
+│   • No type checking is performed, so cases such as add('1', 2) will not raise the expected TypeError.                                                   │
+│   • The diff does not include the required unit test file tests/test_calc.py; therefore the test suite is missing.                                       │
+│   • To meet the acceptance criteria, add explicit type checks (e.g., isinstance(a, (int, float)) and isinstance(b, (int, float))) and raise TypeError    │
+│     when they fail, and add the corresponding test file covering both successful additions and error cases.                                              │
+│                                                                                                                                                          │
+│  Actions                                                                                                                                                 │
+│    • set status 'pending'                                                                                                                                │
+│    • set status 'failure' (blocks merging)                                                                                                               │
+│    • post REQUEST_CHANGES review with the feedback                                                                                                       │
+│                                                                                                                                                          │
+└──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘

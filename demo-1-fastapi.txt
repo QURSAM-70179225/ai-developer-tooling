@@ -1,0 +1,261 @@
+$ analyze https://github.com/fastapi/fastapi
+
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ Repo Analyzer ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃                                                                                                                                                              ┃
+┃  📦 fastapi/fastapi                                                                                                                                          ┃
+┃  FastAPI framework, high performance, easy to learn, fast to code, ready for production                                                                      ┃
+┃                                                                                                                                                              ┃
+┃  ⭐ 104,415 stars   🍴 10,186 forks   🐛 61 open issues       👀 770 watchers                                                                                ┃
+┃  🌿 branch master   📜 license MIT    🗓  created 2018-12-08   🚀 pushed today                                                                                ┃
+┃  #api  #async  #asyncio  #fastapi  #framework  #json  #json-schema  #openapi  #openapi3  #pydantic                                                           ┃
+┃  https://github.com/fastapi/fastapi                                                                                                                          ┃
+┃                                                                                                                                                              ┃
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ GitHub public REST API ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+╭─────────────────────────────────────────────────────────────── 🧰 Tech Stack (with evidence) ────────────────────────────────────────────────────────────────╮
+│  Technology                      Category                        Evidence                                                                                    │
+│ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ │
+│  Python                          Language                        • GitHub Linguist: 100.0% of code (4.4 MB)                                                  │
+│                                                                  • 1219 source file(s) in tree                                                               │
+│                                                                                                                                                              │
+│  Flask                           Framework                       • pyproject.toml → flask@>=3.0.0,<4.0.0 (dev)                                               │
+│   dev/test only                                                                                                                                              │
+│  Starlette                       Framework                       • pyproject.toml → starlette@>=0.46.0                                                       │
+│                                                                                                                                                              │
+│  Pydantic                        Library                         • pyproject.toml → pydantic@>=2.9.0                                                         │
+│                                                                  • pyproject.toml → pydantic@>=2.9.0,<3.0.0 (dev)                                            │
+│  Typer                           Library                         • pyproject.toml → typer@>=0.21.1 (dev)                                                     │
+│   dev/test only                                                  • pyproject.toml → typer@>=0.26.1 (dev)                                                     │
+│                                                                                                                                                              │
+│  Python (pyproject)              Runtime & Build                 • pyproject.toml                                                                            │
+│  Uvicorn                         Runtime & Build                 • pyproject.toml → uvicorn@>=0.12.0 (optional)                                              │
+│                                                                                                                                                              │
+│  uv                              Package Manager                 • uv.lock                                                                                   │
+│                                                                                                                                                              │
+│  pytest                          Testing                         • scripts/tests/test_translation_fixer/conftest.py                                          │
+│                                                                  • tests/test_telemetry/conftest.py                                                          │
+│                                                                  • tests/test_tutorial/test_opentelemetry/conftest.py                                        │
+│                                                                  • …and 1 more                                                                               │
+│                                                                                                                                                              │
+│  GitHub Actions                  DevOps & CI                     • .github/workflows/add-to-project.yml                                                      │
+│                                                                  • .github/workflows/build-docs.yml                                                          │
+│                                                                  • .github/workflows/bump-pre-commit-hooks.yml                                               │
+│                                                                  • …and 15 more                                                                              │
+│                                                                                                                                                              │
+│  Black                           Tooling                         • pyproject.toml → black@>=25.1.0 (dev)                                                     │
+│   dev/test only                                                                                                                                              │
+│  MkDocs                          Tooling                         • docs/en/mkdocs.yml                                                                        │
+│                                                                  • docs/hi/mkdocs.yml                                                                        │
+│  mypy                            Tooling                         • pyproject.toml → mypy@>=1.14.1 (dev)                                                      │
+│   dev/test only                                                                                                                                              │
+│  pre-commit                      Tooling                         • .pre-commit-config.yaml                                                                   │
+│  Ruff                            Tooling                         • pyproject.toml → ruff@>=0.14.14,<0.17.0 (dev)                                             │
+│   dev/test only                                                                                                                                              │
+│ Evidence = the file or manifest entry that proves each item. "dev/test only" = found only in development/test dependencies, so it is a tool used to build or │
+│ test the project, not part of what it ships.                                                                                                                 │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭──────────────────────────────────────────────────────────────────── 🧮 Complexity Score ─────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                              │
+│                                                                     64 / 100    COMPLEX                                                                      │
+│ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸                                                         │
+│  Component                      │ Measured                       │        Points │ Rule (what earns full points)                                             │
+│ ────────────────────────────────┼────────────────────────────────┼───────────────┼────────────────────────────────────────────────────────────────────────── │
+│  Codebase size                  │ 1,236 code files               │       29.3/35 │ log scale, 5,000 code files = max                                         │
+│  Nesting depth                  │ avg 3.2 / max 5                │        8.7/20 │ average path depth of code files, 6 = max                                 │
+│  Language diversity             │ 1 language(s) ≥2%              │        0.0/15 │ 5+ significant languages = max                                            │
+│  Code density                   │ 97% code vs config             │       14.5/15 │ share of code files among code + config files                             │
+│  Dependency surface             │ 67 declared deps               │       11.1/15 │ log scale, 300 dependencies = max                                         │
+│ Main reasons: codebase size (1,236 code files); code density (97% code vs config)                                                                            │
+│                                                                                                                                                              │
+│ Method: score = sum of 5 capped components (35 + 20 + 15 + 15 + 15 = 100). Size and dependencies use log scales so huge repos don't max out instantly. Code  │
+│ = source files by extension; config = manifests, YAML/JSON/TOML, Dockerfiles; docs/assets don't count as code.                                               │
+│ 0–25 Simple · 26–50 Moderate · 51–75 Complex · 76–100 Very Complex                                                                                           │
+│                                                                                                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭──────────────────────────────────────────────────────────────────── 🩺 Dependency Health ────────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                              │
+│                                                                    ✅  HEALTHY    95/100                                                                     │
+│ ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━         │
+│ ✔  pip: lockfile present (uv.lock)                                                                                                                           │
+│ ✔  Automated dependency updates configured (.github/dependabot.yml)                                                                                          │
+│ ▲  No SECURITY.md policy                                            -5                                                                                       │
+│ ✔  CI pipeline configured                                                                                                                                    │
+│ ✔  All 67 unique deps declare a version constraint                                                                                                           │
+│ ✔  Actively maintained (last push 0 day(s) ago)                                                                                                              │
+│                                                                                                                                                              │
+│ Declared deps: 67   exact 0  range 67  unpinned 0  url/git 0                                                                                                 │
+│ Ecosystems: pip                                                                                                                                              │
+│                                                                                                                                                              │
+│ What "healthy" means here: installs are reproducible (a lockfile, or every version pinned), updates are automated (Dependabot/Renovate) and tested (CI),     │
+│ versions are constrained, a security policy exists, and the project is still maintained. Score starts at 100; each failed check subtracts the penalty shown. │
+│ Not checked: whether packages are outdated or have known vulnerabilities. That needs a lookup per package on PyPI/npm/OSV, which this tool does not do, so   │
+│ it makes no claim either way.                                                                                                                                │
+│ ≥75 Healthy · 50–74 Warning · <50 At Risk                                                                                                                    │
+│                                                                                                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭────────────────────────────────────────────────────────────────────── 📦 Dependencies ───────────────────────────────────────────────────────────────────────╮
+│  Package                                                            Declared version               Pinning         Scope            Manifest                 │
+│ ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────── │
+│  annotated-doc                                                      >=0.0.2                        range           runtime          pyproject.toml           │
+│  opentelemetry-api                                                  >=1.44.0                       range           runtime          pyproject.toml           │
+│  pydantic                                                           >=2.9.0                        range           runtime          pyproject.toml           │
+│  starlette                                                          >=0.46.0                       range           runtime          pyproject.toml           │
+│  typing-extensions                                                  >=4.8.0                        range           runtime          pyproject.toml           │
+│  typing-inspection                                                  >=0.4.2                        range           runtime          pyproject.toml           │
+│  email-validator                                                    >=2.0.0                        range           optional         pyproject.toml           │
+│  fastapi-cli                                                        >=0.0.32                       range           optional         pyproject.toml           │
+│  fastar                                                             >= 0.9.0                       range           optional         pyproject.toml           │
+│  httpx                                                              >=0.23.0,<1.0.0                range           optional         pyproject.toml           │
+│  httpx2                                                             >=2.0.0                        range           optional         pyproject.toml           │
+│  itsdangerous                                                       >=1.1.0                        range           optional         pyproject.toml           │
+│  jinja2                                                             >=3.1.5                        range           optional         pyproject.toml           │
+│  opentelemetry-exporter-otlp-proto-http                             >=1.44.0                       range           optional         pyproject.toml           │
+│  opentelemetry-sdk                                                  >=1.44.0                       range           optional         pyproject.toml           │
+│  pydantic-extra-types                                               >=2.0.0                        range           optional         pyproject.toml           │
+│  pydantic-settings                                                  >=2.0.0                        range           optional         pyproject.toml           │
+│  python-multipart                                                   >=0.0.18                       range           optional         pyproject.toml           │
+│  pyyaml                                                             >=5.3.1                        range           optional         pyproject.toml           │
+│  uvicorn                                                            >=0.12.0                       range           optional         pyproject.toml           │
+│  a2wsgi                                                             >=1.9.0,<=2.0.0                range           dev              pyproject.toml           │
+│  anyio                                                              >=3.2.1,<5.0.0                 range           dev              pyproject.toml           │
+│  black                                                              >=25.1.0                       range           dev              pyproject.toml           │
+│  cairosvg                                                           >=2.8.2                        range           dev              pyproject.toml           │
+│  coverage                                                           >=7.13,<8.0                    range           dev              pyproject.toml           │
+│ Showing 25 of 67 unique dependencies (6 runtime, 14 optional, 47 dev)  ·  full list: analyze <url> --json                                                    │
+│ Pinning: exact = one version (==1.2.3) · range = allowed span (>=1.2, ^1.2) · UNPINNED = any version, risky · git/url = installed outside the package        │
+│ registry.                                                                                                                                                    │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭──────────────────────────────────────────────────────────── 📄 Manifest Preview — pyproject.toml ────────────────────────────────────────────────────────────╮
+│    1 [build-system]                                                                                                                                          │
+│    2 requires = ["pdm-backend"]                                                                                                                              │
+│    3 build-backend = "pdm.backend"                                                                                                                           │
+│    4                                                                                                                                                         │
+│    5 [project]                                                                                                                                               │
+│    6 name = "fastapi"                                                                                                                                        │
+│    7 dynamic = ["version"]                                                                                                                                   │
+│    8 description = "FastAPI framework, high performance, easy to learn, fast to code, ready for production"                                                  │
+│    9 readme = "README.md"                                                                                                                                    │
+│   10 license = "MIT"                                                                                                                                         │
+│   11 license-files = ["LICENSE"]                                                                                                                             │
+│   12 requires-python = ">=3.10"                                                                                                                              │
+│   13 authors = [                                                                                                                                             │
+│   14     { name = "Sebastián Ramírez", email = "tiangolo@gmail.com" },                                                                                       │
+│   15 ]                                                                                                                                                       │
+│   16 classifiers = [                                                                                                                                         │
+│   17     "Intended Audience :: Information Technology",                                                                                                      │
+│   18     "Intended Audience :: System Administrators",                                                                                                       │
+│   19     "Operating System :: OS Independent",                                                                                                               │
+│   20     "Programming Language :: Python :: 3",                                                                                                              │
+│   21     "Programming Language :: Python",                                                                                                                   │
+│   22     "Topic :: Internet",                                                                                                                                │
+│   23     "Topic :: Software Development :: Libraries :: Application Frameworks",                                                                             │
+│   24     "Topic :: Software Development :: Libraries :: Python Modules",                                                                                     │
+│   25     "Topic :: Software Development :: Libraries",                                                                                                       │
+│   26     "Topic :: Software Development",                                                                                                                    │
+│   27     "Typing :: Typed",                                                                                                                                  │
+│   28     "Development Status :: 4 - Beta",                                                                                                                   │
+│   29     "Environment :: Web Environment",                                                                                                                   │
+│   30     "Framework :: AsyncIO",                                                                                                                             │
+╰─────────────────────────────────────────────────────────────────── first 30 of 428 lines ────────────────────────────────────────────────────────────────────╯
+╭───────────────────────────────────────────────────────────────────── 🌳 File Structure ──────────────────────────────────────────────────────────────────────╮
+│ Major areas                                                                                                                                                  │
+│  Folder           Files   Main file types                          Purpose                                                                                   │
+│ ──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────── │
+│  docs/            1,937   .md 1,669 · .png 187 · .svg 56           Documentation  (by name)                                                                  │
+│  tests/             649   .py 649                                  Automated tests  (by name)                                                                │
+│  docs_src/          489   .py 485 · .html 2 · .js 1                Example / tutorial code  (by name)                                                        │
+│  scripts/            66   .py 33 · .md 28 · .sh 5                  Helper scripts & developer tooling  (by name)                                             │
+│  fastapi/            60   .py 52 · .md 7 · .typed 1                Main package source  (by repo name)                                                       │
+│  .github/            26   .yml 26                                  GitHub config: CI workflows, issue/PR templates, Dependabot  (by name)                    │
+│  (root files)         8   (no ext) 2 · .gitignore 1 · .yaml 1      Top-level files, e.g. README.md, LICENSE, pyproject.toml, .gitignore  (by contents)       │
+│                                                                                                                                                              │
+│ 📁 fastapi/                                                                                                                                                  │
+│ ├── 📁 .github/  26 files                                                                                                                                    │
+│ │   ├── 📁 DISCUSSION_TEMPLATE/  2 files                                                                                                                     │
+│ │   ├── 📁 ISSUE_TEMPLATE/  2 files                                                                                                                          │
+│ │   ├── 📁 workflows/  18 files                                                                                                                              │
+│ │   ├── ⚙️  dependabot.yml                                                                                                                                   │
+│ │   ├── ⚙️  latest-changes.yml                                                                                                                               │
+│ │   ├── ⚙️  pr-push.yml                                                                                                                                      │
+│ │   └── … 1 more (0 dirs, 1 file)                                                                                                                            │
+│ ├── 📁 docs/  1,937 files                                                                                                                                    │
+│ │   ├── 📁 de/  126 files                                                                                                                                    │
+│ │   ├── 📁 en/  422 files                                                                                                                                    │
+│ │   ├── 📁 es/  126 files                                                                                                                                    │
+│ │   ├── 📁 fr/  126 files                                                                                                                                    │
+│ │   ├── 📁 hi/  127 files                                                                                                                                    │
+│ │   ├── 📁 ja/  126 files                                                                                                                                    │
+│ │   └── … 9 more (7 dirs, 2 files)                                                                                                                           │
+│ ├── 📁 docs_src/  489 files                                                                                                                                  │
+│ │   ├── 📁 additional_responses/  5 files                                                                                                                    │
+│ │   ├── 📁 additional_status_codes/  3 files                                                                                                                 │
+│ │   ├── 📁 advanced_middleware/  4 files                                                                                                                     │
+│ │   ├── 📁 app_testing/  14 files                                                                                                                            │
+│ │   ├── 📁 async_tests/  4 files                                                                                                                             │
+│ │   ├── 📁 authentication_error_status_code/  2 files                                                                                                        │
+│ │   └── … 72 more (72 dirs, 0 files)                                                                                                                         │
+│ ├── 📁 fastapi/  60 files                                                                                                                                    │
+│ │   ├── 📁 .agents/  7 files                                                                                                                                 │
+│ │   ├── 📁 _compat/  3 files                                                                                                                                 │
+│ │   ├── 📁 dependencies/  3 files                                                                                                                            │
+│ │   ├── 📁 middleware/  7 files                                                                                                                              │
+│ │   ├── 📁 openapi/  5 files                                                                                                                                 │
+│ │   ├── 📁 security/  7 files                                                                                                                                │
+│ │   └── … 25 more (1 dir, 24 files)                                                                                                                          │
+│ ├── 📁 scripts/  66 files                                                                                                                                    │
+│ │   ├── 📁 playwright/  12 files                                                                                                                             │
+│ │   ├── 📁 tests/  38 files                                                                                                                                  │
+│ │   ├── 📄 add_latest_release_date.py                                                                                                                        │
+│ │   ├── 📄 deploy_docs_status.py                                                                                                                             │
+│ │   ├── 📄 doc_parsing_utils.py                                                                                                                              │
+│ │   ├── 📄 docs.py                                                                                                                                           │
+│ │   └── … 12 more (0 dirs, 12 files)                                                                                                                         │
+│ ├── 📁 tests/  649 files                                                                                                                                     │
+│ │   ├── 📁 benchmarks/  4 files                                                                                                                              │
+│ │   ├── 📁 memory_benchmarks/  4 files                                                                                                                       │
+│ │   ├── 📁 test_modules_same_name_body/  6 files                                                                                                             │
+│ │   ├── 📁 test_request_params/  47 files                                                                                                                    │
+│ │   ├── 📁 test_telemetry/  16 files                                                                                                                         │
+│ │   ├── 📁 test_tutorial/  341 files                                                                                                                         │
+│ │   └── … 229 more (1 dir, 228 files)                                                                                                                        │
+│ ├── ⚙️  .gitignore                                                                                                                                           │
+│ ├── ⚙️  .pre-commit-config.yaml                                                                                                                              │
+│ ├── 📦 .python-version                                                                                                                                       │
+│ ├── 📦 CITATION.cff                                                                                                                                          │
+│ └── … 4 more (0 dirs, 4 files)                                                                                                                               │
+│                                                                                                                                                              │
+│ 3,235 files · 436 dirs   📄 code 1,236  ⚙️  config 43  📝 docs 1,706  📦 other 250                                                                           │
+│ Condensed to fit 60 lines: 2 level(s), 10 top-level / 6 nested entries per folder (--max-lines 0 for the full view). Ignored: .git, node_modules, venv,      │
+│ dist, build, vendor, caches…                                                                                                                                 │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+╭────────────────────────────────────────────────────────────────── 📈 Contribution Activity ──────────────────────────────────────────────────────────────────╮
+│                                                                                                                                                              │
+│ Commits per week                                                                                                                                             │
+│  110 ┤                                                                     ██                                                                                │
+│      │               ▄▄                                                    ██                                                                                │
+│      │               ██    ██                                              ██                                                                                │
+│      │   ▃▃          ██    ██          ██                         ▃▃       ██                                                                                │
+│   55 ┤   ██          ██    ██    ▆▆    ██                         ██       ██                                                                                │
+│      │   ██    ██    ██    ██    ██    ██    ▃▃                   ██    ██ ██    ▆▆                                                                          │
+│      │   ██ ██ ██ ▅▅ ██ ▁▁ ██    ██    ██ ▆▆ ██ ██    ▂▂          ██ ▂▂ ██ ██    ██                                                                          │
+│      │██ ██ ██ ██ ██ ██ ██ ██ ▃▃ ██ ██ ██ ██ ██ ██ ▂▂ ██ ·· ·· ▁▁ ██ ██ ██ ██ ▇▇ ██                                                                          │
+│      └──────────────────────────────────────────────────────────────────────────────                                                                         │
+│       May         Jun         Jul         Aug            Sep         Oct         Nov                                                                         │
+│                                                                                                                                                              │
+│ Total 881   Avg/week 33.9   Peak 110 (wk of Oct 18)   Active weeks 24/26   Trend ▼ -30%                                                                      │
+│ Weekly commits on the default branch, last 26 weeks · source: stats/commit_activity                                                                          │
+│                                                                                                                                                              │
+│ Top contributors (all-time commits)                                                                                                                          │
+│  1. tiangolo            ██████████████████████████████████████████████████ 2,313                                                                             │
+│  2. github-actions[bot] ██████████████████                                   813                                                                             │
+│  3. dependabot[bot]     ██████                                               257                                                                             │
+│  4. latest-changes[bot] ████                                                 166                                                                             │
+│  5. YuriiMotov          ███                                                  124                                                                             │
+│  6. pr-submit[bot]      ██                                                   101                                                                             │
+│  7. alejsdev            █                                                     64                                                                             │
+│  8. pre-commit-ci[bot]  █                                                     50                                                                             │
+│  9. jaystone776         █                                                     49                                                                             │
+│ 10. valentinDruzhinin   █                                                     33                                                                             │
+│ Counts come from GitHub's contributor list (default branch, all time; anonymous commits excluded). Automated accounts end in [bot].                          │
+│                                                                                                                                                              │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+                                                  API quota: 4924/5000 left · 7 requests used · authenticated                                                   

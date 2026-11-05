@@ -1,0 +1,46 @@
+$ pr-review review --repo QURSAM-70179225/pr-reviewer-test1 --pr 4 --live -o demo-A5-userController.txt
+🤖 AI PR Reviewer · ticket source: local · LLM: openai/openai/gpt-oss-120b · mode: LIVE (comments, statuses and merges are real)
+  · set status 'pending'
+  · ticket id: CFG-1
+  · ticket fetched: 'Implement Configuration Management APIs (Create, Read, Update, Delete) for Track Configurations'
+  · diff fetched: 11,964 characters
+  · verdict: fulfilled=False
+  · set status 'failure' (blocks merging)
+  · post REQUEST_CHANGES review with the feedback
+┌────────────────────────────────────────────────────────────── 🤖 AI PR Review ───────────────────────────────────────────────────────────────┐
+│                                                                                                                                              │
+│  ❌ BLOCKED: requirements not met                                                                                                            │
+│                                                                                                                                              │
+│  Pull request  QURSAM-70179225/pr-reviewer-test1#4: CFG-1 User controller                                                                    │
+│  Branch        feature/CFG-1-user-controller → main                                                                                          │
+│  Ticket        CFG-1: Implement Configuration Management APIs (Create, Read, Update, Delete) for Track Configurations                        │
+│  Diff          11,964 characters                                                                                                             │
+│                                                                                                                                              │
+│  LLM verdict: fulfilled = false                                                                                                              │
+│  Missing Requirements / Issues                                                                                                               │
+│                                                                                                                                              │
+│   • The ticket requires implementation of configuration management endpoints (addNewConfiguration, getAllConfigurations,                     │
+│     getSingleConfiguration, updateConfiguration, deleteConfiguration) in a configuration controller; the diff only adds a userController.js  │
+│     with user‑related logic and does not touch any configuration files.                                                                      │
+│   • No code handling POST /configurations (create) is present, so the required 200 response with userId = req.user.id and 400 validation     │
+│     for missing trackId, configurationName or direction is absent.                                                                           │
+│   • No GET all configurations handler exists; therefore the behavior of returning only the authenticated user's configurations (including    │
+│     track and geoFences) or a 404 when none exist is not implemented.                                                                        │
+│   • No GET single configuration handler exists; the required ownership check and 404 handling are missing.                                   │
+│   • No PUT/PATCH or DELETE handlers for configurations are present; ownership checks and proper 404 responses are not implemented.           │
+│   • The diff does not ensure that unhandled errors are forwarded to error‑handling middleware (next(error)). All added functions either      │
+│     throw ApiError directly or return responses without try/catch/next.                                                                      │
+│   • Responses do not use the ApiResponse.result pattern for configuration endpoints because those endpoints are not implemented at all.      │
+│   • The file modifies unrelated functionality (user registration, login, password reset, Google auth, etc.) which is outside the scope of    │
+│     the ticket.                                                                                                                              │
+│                                                                                                                                              │
+│  Conclusion: The provided code does not fulfill any of the acceptance criteria for the configuration management APIs. Implement the          │
+│  required configuration controller functions with proper validation, ownership checks, error handling, and responses as described in the     │
+│  ticket.                                                                                                                                     │
+│                                                                                                                                              │
+│  Actions                                                                                                                                     │
+│    • set status 'pending'                                                                                                                    │
+│    • set status 'failure' (blocks merging)                                                                                                   │
+│    • post REQUEST_CHANGES review with the feedback                                                                                           │
+│                                                                                                                                              │
+└──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘

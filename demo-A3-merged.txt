@@ -1,0 +1,30 @@
+$ pr-review review --repo QURSAM-70179225/pr-reviewer-test1 --pr 1 --live -o demo-A3-merged.txt
+🤖 AI PR Reviewer · ticket source: local · LLM: openai/openai/gpt-oss-120b · mode: LIVE (comments, statuses and merges are real)
+  · set status 'pending'
+  · ticket id: DEMO-1
+  · ticket fetched: 'Greeting function'
+  · diff fetched: 915 characters
+  · verdict: fulfilled=True
+  · set status 'success'
+  · merge into 'main' (squash, head 88f3e9e)
+  · post a summary comment
+┌──────────────────────────────────────────────────────────────────── 🤖 AI PR Review ─────────────────────────────────────────────────────────────────────┐
+│                                                                                                                                                          │
+│  ✅ MERGED                                                                                                                                               │
+│                                                                                                                                                          │
+│  Pull request  QURSAM-70179225/pr-reviewer-test1#1: DEMO-1 Greeting function                                                                             │
+│  Branch        feature/DEMO-1-greeting → main                                                                                                            │
+│  Ticket        DEMO-1: Greeting function                                                                                                                 │
+│  Diff          915 characters                                                                                                                            │
+│                                                                                                                                                          │
+│  LLM verdict: fulfilled = true                                                                                                                           │
+│  The greet function correctly returns the formatted greeting and raises ValueError for empty strings. Corresponding unit tests covering both scenarios   │
+│  are present and pass.                                                                                                                                   │
+│                                                                                                                                                          │
+│  Actions                                                                                                                                                 │
+│    • set status 'pending'                                                                                                                                │
+│    • set status 'success'                                                                                                                                │
+│    • merge into 'main' (squash, head 88f3e9e)                                                                                                            │
+│    • post a summary comment                                                                                                                              │
+│                                                                                                                                                          │
+└──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘

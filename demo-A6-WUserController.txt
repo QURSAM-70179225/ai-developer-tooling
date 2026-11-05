@@ -1,0 +1,43 @@
+$ pr-review review --repo QURSAM-70179225/pr-reviewer-test1 --pr 5 --live -o demo-A6-WUserController.txt
+🤖 AI PR Reviewer · ticket source: local · LLM: openai/openai/gpt-oss-120b · mode: LIVE (comments, statuses and merges are real)
+  · set status 'pending'
+  · ticket id: CFG-1
+  · ticket fetched: 'Implement Configuration Management APIs (Create, Read, Update, Delete) for Track Configurations'
+  · diff fetched: 10,144 characters
+  · verdict: fulfilled=False
+  · set status 'failure' (blocks merging)
+  · post REQUEST_CHANGES review with the feedback
+┌────────────────────────────────────────────────────────────── 🤖 AI PR Review ───────────────────────────────────────────────────────────────┐
+│                                                                                                                                              │
+│  ❌ BLOCKED: requirements not met                                                                                                            │
+│                                                                                                                                              │
+│  Pull request  QURSAM-70179225/pr-reviewer-test1#5: CFG-1 WUser controller                                                                   │
+│  Branch        feature/CFG-1-wuser-controller → main                                                                                         │
+│  Ticket        CFG-1: Implement Configuration Management APIs (Create, Read, Update, Delete) for Track Configurations                        │
+│  Diff          10,144 characters                                                                                                             │
+│                                                                                                                                              │
+│  LLM verdict: fulfilled = false                                                                                                              │
+│  Missing functionality                                                                                                                       │
+│                                                                                                                                              │
+│   • The diff introduces a WUserController.js with user‑related endpoints; it does not implement the required configuration management API    │
+│     (addNewConfiguration, getAllConfigurations, getSingleConfiguration, updateConfiguration, deleteConfiguration).                           │
+│   • No routes or controller logic for creating, reading, updating, or deleting Track Configurations are present, so none of the acceptance   │
+│     criteria (POST 200/400, GET 200/404, PUT/PATCH 200/404, DELETE 200/404, user‑scoping, inclusion of track and geoFences) are satisfied.   │
+│                                                                                                                                              │
+│  Code issues unrelated to the ticket                                                                                                         │
+│                                                                                                                                              │
+│   • validateConfirmationToken is exported but never defined, which would cause a runtime error.                                              │
+│   • Several handlers accept a next parameter but never call next(error); unhandled errors are not consistently forwarded to error‑handling   │
+│     middleware.                                                                                                                              │
+│   • In googleAuth the catch block returns ApiResponse.result(res, {error}); without a status code, violating the response‑format contract.   │
+│   • Inconsistent use of httpStatusCodes (e.g., httpStatusCodes.OK vs raw numbers) and missing await on async operations in some places.      │
+│                                                                                                                                              │
+│  Conclusion The submitted changes do not address the CFG‑1 story at all and contain unrelated bugs. The acceptance criteria are therefore    │
+│  not fulfilled.                                                                                                                              │
+│                                                                                                                                              │
+│  Actions                                                                                                                                     │
+│    • set status 'pending'                                                                                                                    │
+│    • set status 'failure' (blocks merging)                                                                                                   │
+│    • post REQUEST_CHANGES review with the feedback                                                                                           │
+│                                                                                                                                              │
+└──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘

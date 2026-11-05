@@ -1,0 +1,22 @@
+$ pr-review review --repo QURSAM-70179225/pr-reviewer-test1 --pr 3 --live -o demo-A2-halted.txt
+🤖 AI PR Reviewer · ticket source: local · LLM: openai/llama-3.3-70b-versatile · mode: LIVE (comments, statuses and merges are real)
+  · set status 'pending'
+  · HALT at ticket-id: No ticket ID found in PR title 'Update project notes' or branch 'patch-1'.
+  · set status 'failure' (blocks merging)
+  · post a comment explaining what went wrong
+┌──────────────────────────────────────────────────────────────────── 🤖 AI PR Review ─────────────────────────────────────────────────────────────────────┐
+│                                                                                                                                                          │
+│  ⚠️  HALTED: not merged                                                                                                                                  │
+│                                                                                                                                                          │
+│  Pull request  QURSAM-70179225/pr-reviewer-test1#3: Update project notes                                                                                 │
+│  Branch        patch-1 → main                                                                                                                            │
+│  Halted at     ticket-id                                                                                                                                 │
+│  Problem       No ticket ID found in PR title 'Update project notes' or branch 'patch-1'.                                                                │
+│  How to fix    Name the branch or title with the ticket ID, e.g. PROJ-123 or feature/PROJ-123-login.                                                     │
+│                                                                                                                                                          │
+│  Actions                                                                                                                                                 │
+│    • set status 'pending'                                                                                                                                │
+│    • set status 'failure' (blocks merging)                                                                                                               │
+│    • post a comment explaining what went wrong                                                                                                           │
+│                                                                                                                                                          │
+└──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘

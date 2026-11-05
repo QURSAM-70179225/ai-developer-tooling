@@ -1,0 +1,8 @@
+$ analyze https://gitlab.com/foo/bar
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ ✖ Invalid GitHub URL ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃                                                                                                   ┃
+┃  'gitlab.com' is not a GitHub URL. Only github.com repositories are supported.                    ┃
+┃                                                                                                   ┃
+┃  💡 Use a URL like https://github.com/<owner>/<repo>  (e.g. https://github.com/fastapi/fastapi).  ┃
+┃                                                                                                   ┃
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛

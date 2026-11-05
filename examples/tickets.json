@@ -1,0 +1,39 @@
+{
+  "DEMO-1": {
+    "title": "Greeting function",
+    "description": "Add a greet() helper used by the welcome screen.",
+    "acceptance_criteria": [
+      "greet(name) returns the string 'Hello, <name>!'",
+      "greet('') raises ValueError",
+      "There is a unit test for both cases"
+    ]
+  },
+  "DEMO-2": {
+    "title": "Add two numbers",
+    "description": "Add an add() helper for the calculator.",
+    "acceptance_criteria": [
+      "add(a, b) returns a + b for ints and floats",
+      "add() raises TypeError if an argument is not a number",
+      "There is a unit test file tests/test_calc.py"
+    ]
+  },
+  "DEMO-3": {
+    "title": "Ticket with no acceptance criteria (to demo a safe halt)",
+    "description": "Intentionally has no criteria."
+  },
+  "CFG-1": {
+    "title": "Implement Configuration Management APIs (Create, Read, Update, Delete) for Track Configurations",
+    "description": "Type: Story. Component: Backend / Configuration Module. Implement REST controller handlers that let an authenticated user manage their own track configurations. A configuration links a user to a track (TrackImage) and holds a name, a direction and optional polygons; it can also have associated geofences (GeoFence). Every operation is scoped to the logged-in user (req.user.id).\nFiles: a configuration controller exporting addNewConfiguration, getAllConfigurations, getSingleConfiguration, deleteConfiguration, updateConfiguration. Models: Configuration, TrackImage, GeoFence. Utilities: ApiResponse, ApiError, http-status-codes.\nFunctional requirements:\n1. Add: body trackId, configurationName, direction (required), polygons (optional); 400 'All Fields are required' if a required field is missing; create with userId = req.user.id; 200 { status: 'Config Added successfully' }.\n2. Get all: the user's configurations, each including track and geoFences; 404 'Configuration Not Found' if none; 200 with the list.\n3. Get single: configurationId URL param; match configurationId AND userId, include track; 404 if no match, else 200.\n4. Update: configurationId URL param; body configurationName, polygons, direction; only for the owner; 404 if no rows updated, else 200.\n5. Delete: configurationId URL param; only for the owner; 404 if nothing deleted, else 200.\nNon-functional: every handler uses try/catch and forwards errors with next(error); responses use ApiResponse.result, errors use ApiError with standard HTTP status codes; every query is filtered by userId; endpoints sit behind the auth middleware.",
+    "acceptance_criteria": [
+      "POST create returns 200 and persists the configuration with the correct userId when all required fields are provided.",
+      "POST create returns 400 when trackId, configurationName or direction is missing.",
+      "GET all returns only the authenticated user's configurations, with track and geoFences included.",
+      "GET all returns 404 when the user has no configurations.",
+      "GET single returns the configuration with its track for the owner, and 404 for a non-existent ID or another user's configuration.",
+      "PUT/PATCH update modifies configurationName, polygons and direction for the owner, and returns 404 otherwise.",
+      "DELETE removes the configuration for the owner, and returns 404 otherwise.",
+      "A user cannot read, update or delete another user's configuration.",
+      "Unhandled errors are passed to the error-handling middleware."
+    ]
+  }
+}
